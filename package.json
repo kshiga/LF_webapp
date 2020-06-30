@@ -1,0 +1,30 @@
+{
+  "name": "lf_webapp",
+  "version": "1.0.0",
+  "description": "Kaitlyn Higa's submission to LightFeather.io's Fullstack Engineering Coding Challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshiga/LF_webapp.git"
+  },
+  "author": "Kaitlyn Higa",
+  "bugs": {
+    "url": "https://github.com/kshiga/LF_webapp/issues"
+  },
+  "homepage": "https://github.com/kshiga/LF_webapp#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4"
+    "react-testing-library": "^8.0.1"
+  }
+}
