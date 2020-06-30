@@ -31,8 +31,8 @@ Web Application
 #### Webserver Specifications
 
 - [x] The webserver should run on port `23456`.
-- [] The webserver has an endpoint at `/api/encode`.
-  - [] This endpoint should accept post requests.
+- [x] The webserver has an endpoint at `/api/encode`.
+  - [x] This endpoint should accept post requests.
   - [] This endpoint expects a JSON string to be received. The JSON structure should have two keys.
     - [] This endpoint should accept post requests.
     - [] The JSON structure should have a key `Shift`. It’s value should be an
@@ -47,10 +47,10 @@ Web Application
         - char `A`, shift `1`: `B`  
         - char `B`, shift `2`: `D`
   - [] When the message is successfully encoded, it should be stored in a file on disk.
-  - [] The endpoint should return a 200 if successful, 500 if unsuccessful.
+  - [x] The endpoint should return a 200 if successful, 500 if unsuccessful.
   - [] The endpoint should return a json object with a single key `EncodedMessage`.
     - [] If successful, the value returned should be the encoded string.
-    - [] If unsuccessful, it should return an empty string.
+    - [x] If unsuccessful, it should return an empty string.
 
 
 #### Web Component Specifications
