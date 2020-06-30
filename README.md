@@ -4,9 +4,8 @@
 
 This repository represents Kaitlyn Higa's submission to LightFeather.io's Fullstack Engineering Coding Challenge.
 
-The app created is written in ES6 JavaScript and utilizes the following tools, libraries, and frameworks.
+The app created is written in JavaScript and utilizes the following tools, libraries, and frameworks.
 
-- Babel
 - Node
   - Express
   - [Testing Library] // TBD

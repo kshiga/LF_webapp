@@ -4,7 +4,7 @@
   "description": "Kaitlyn Higa's submission to LightFeather.io's Fullstack Engineering Coding Challenge",
   "main": "app.js",
   "scripts": {
-    "test": "npm run test",
+    "test": "mocha $(find test -name '*.js')",
     "start": "nodemon ./bin/www"
   },
   "repository": {
@@ -28,6 +28,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
     "react-testing-library": "^8.0.1"
