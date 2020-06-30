@@ -31,7 +31,7 @@ Web Application
 -----
 #### Webserver Specifications
 
-- [] The webserver should run on port `23456`.
+- [x] The webserver should run on port `23456`.
 - [] The webserver has an endpoint at `/api/encode`.
   - [] This endpoint should accept post requests.
   - [] This endpoint expects a JSON string to be received. The JSON structure should have two keys.
