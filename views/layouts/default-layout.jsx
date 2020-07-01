@@ -9,7 +9,11 @@ function DefaultLayout(props) {
         <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css"/>
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
       </head>
-      <body>{props.children}</body>
+      <body>
+        <div className="container">
+          {props.children}
+        </div>
+      </body>
     </html>
   );
 }
