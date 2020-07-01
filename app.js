@@ -14,7 +14,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+    cacheControl: true,
+    immutable: true,
+    index: false,
+    maxAge: "7d"
+  })
+);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
