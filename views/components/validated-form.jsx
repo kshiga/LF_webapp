@@ -8,10 +8,11 @@ class ValidatedForm extends React.Component {
 
     if(props.children){
       props.children.map((child) => {
-        formValid = formValid && child.valid;
-        fieldsValidity[child.name] = child.valid;
+        formValid = formValid && child.props.valid;
+        fieldsValidity[`${child.props.name}`] = child.props.valid;
       });
     }
+
     this.updateFieldValid = this.updateFieldValid.bind(this);
     this._addListenerToChildren = this._addListenerToChildren.bind(this);
 
@@ -31,8 +32,8 @@ class ValidatedForm extends React.Component {
   _addListenerToChildren() {
     if(!this.props.children) return null;
     return this.props.children.map(function(child){
-        return React.cloneElement(child, {changeHandler: this.updateFieldValid})
-      }
+        return React.cloneElement(child, { changeHandler: this.updateFieldValid, key: child.props.name })
+      }.bind(this)
     )
   }
 
