@@ -10,6 +10,7 @@ The app created is written in JavaScript and utilizes the following tools, libra
   - [Express](https://expressjs.com/)
   - [Mocha](https://mochajs.org/)
   - [Chai](https://www.chaijs.com/)
+  - [Mongoose](https://mongoosejs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Skeleton CSS](http://getskeleton.com/)
 - [jQuery](https://jquery.com/)
@@ -156,6 +157,25 @@ Here is how to manually test the requirements on the elements
       - Follow the steps for creating valid input for each of the form fields
     - expected result
       - Submit button is enabled
+
+-----
+
+### Notes & Future Improvements
+
+I took this opportunity to re-familiarize myself with nodejs, a technology that I have not utilized in a while.  I chose node because of its robust packages and support and because I wanted to keep all of the work in JavaScript, one of my most used languages. As you will read below, the familiarity of node/express concepts (or lack of) had significant impact upon my ability to be building the products.
+
+#### Webserver
+Overall, I'm fairly satisfied with the technical implementation of the server. I chose Express as the application framework due to my familiarity with it as well as its popularity.  Google is my most trusted companion while coding and Express was at the top of all of the lists for node application frameworks.  PostgrSQL, the database that I originally chose however, presented me with a significant amount of obstacles.  Familiarity was the main reason that I chose this relational database, but I ran into issues upon install.  After more research, I settled upon MongoDB. Because the requirements did not ask for a read from disk, Mongo became the choice for the application's database.  Due to its document based structure, writes are relatively fast. Additionally, a popular node package called Mongoose was able to offer a very elegant and readable solution for creating models.
+
+In creating the methods for encoding messages, an ambiguity in how the cipher was to work appeared. What should be included in this alphabet set?  Latin letters only?  Lowercase? Uppercase?  What would the order of this set be?  Lowercase first such that a loop would look like `a, b, c, ..., y, z, A, B, ...`?  The opposite way around?  I decided to make some assumptions and base the method off of those.  
+
+1. The alphabet consists of unaccented latin letters
+2. Special characters are not included in the alphabet
+3. Casing does not create a new set of letters, but ...
+4. Casing must be maintained per each character
+
+In the future, I would want to develop a client side to this application, if just to be able to send out the post requests.  Ideally, the page would also display a set of previously encoded messages.  A decoder functionality would also be something to consider.
+
 _____
 
 ### Requirements
