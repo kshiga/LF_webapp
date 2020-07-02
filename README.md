@@ -176,6 +176,18 @@ In creating the methods for encoding messages, an ambiguity in how the cipher wa
 
 In the future, I would want to develop a client side to this application, if just to be able to send out the post requests.  Ideally, the page would also display a set of previously encoded messages.  A decoder functionality would also be something to consider.
 
+#### Webcomponent
+Phew, this part threw me for a loop as I was working on it.  I initially started with the intention of using the [React library](https://reactjs.org/) to create reusable stateful React components.  React distinguishes itself by creating a "Virtual" DOM, in which React components can do their work and calculations instead of the actual document, which speeds up render times.  React's components also allow modularity, having a single base class for creating page elements allows one to access a single point to change basic functions.  I began work building out these components utilizing the Express React view engine package.  I had completed the creation of most of the components when I came upon the issue that none of them were reacting to events being triggered in the browser.
+
+There I learned that an Express view engine is purely for render-only contexts.  JSX is used only as a templating engine and does not actually go beyond building the first render and dropping it in the page.  This was a significant issue as I wouldn't be able to build it to spec.  Online guides and answers pointed to creating a proxy server set up by Express to point a React app to.  With the untested code and the amount of rework, I decided to scrap this work and restart again, with the simplest of approaches.  You can see the React work done here in this [branch](https://github.com/kshiga/LF_webapp/tree/webcomponent).
+
+I decided to serve up static HTML as no data needed to be passed to the client upon page load.  Forms and form elements are included as par of HTML5, so I utilized these structures to create the form to spec.  jQuery was decided upon because of its ease of use and ability to associate data with elements.
+
+One technology that kept throughout the process was the Skeleton CSS library.  I have found many uses for this boilerplate code, often being all that I need to start when I have specific style requirements.  While other frameworks like Bootstrap are great, customizing to your own styles often requires changes in several places, which can be difficult to manage.
+
+In the future, this code needs to be tested.  It could also use more styling around errors.  A hopeful would be to move the work done in the view engine into the public scripts and utilize that to build the page.
+
+
 _____
 
 ### Requirements
