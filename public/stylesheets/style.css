@@ -1,8 +1,18 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+input
+{
+  border-radius: 2px;
 }
 
-a {
-  color: #00B7FF;
+.button:disabled,
+.button:disabled:hover
+{
+  background-color: #777;
+  border-color: transparent;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.input-group
+{
+  margin-bottom: 8px;
 }
