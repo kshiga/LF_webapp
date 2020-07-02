@@ -8,21 +8,16 @@ The app created is written in JavaScript and utilizes the following tools, libra
 
 - Node
   - Express
-  - [Testing Library] // TBD
-- [DB] // TBD
-- [CSS Styling Library] // TBD
-- React
-  - react-testing-library
+  - Mocha, Chai [Testing]
+- MongoDB
+- Skeleton
 
 -----
 
 ### How to run
-
-
 Requirements
 - Node.js
 - MongoDB
-
 
 
 #### Web Application
@@ -31,17 +26,25 @@ Requirements
 -----
 ### How to test
 
-Once your application is running, you can move on to testing out its functionality.
+Once your application is running, you can move on to testing out its functionality. You can start the application by navigating to the `LF_webapp` directory and running the command `npm start`.
 
 #### Webserver
-In a terminal, run the following command.
+In a new terminal, run the following command.
+
 ```
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"shift": 3, "message": "encode this message please"}' \
   localhost:23456/api/encode
 ```
+
 Alter the JSON data to get different results.
+
+Additionally, you can run tests without a server running.  In a terminal, navigate to the `LF_webapp` directory and run the tests with `npm test`.
+
+#### Client
+With the server running, open a browser and navigate to [localhost:23456/user-signup.html](http://localhost:23456/user-signup.html).  Be sure to have JavaScript enabled on your browser.
+
 
 -----
 #### Webserver Specifications
@@ -70,21 +73,24 @@ Alter the JSON data to get different results.
 
 
 #### Web Component Specifications
-- [] Create a user signup form with the following fields
-  - [] Username
-    - [] Make sure a username cannot be longer than 15 characters.
-  - [] Email
-    - [] Validate the email addresses to spec: https://stackoverflow.com/a/2049510.
-  - [] Password
-  - [] Confirm Password
-    - [] Confirm the ‘Password’ and ‘Confirm Password’ fields match.
-  - [] All fields are required
-- [] Form should have validation checks
-  - [] If input is invalid, show error on click outside of field
-  - [] If any input is invalid, disable submit button
-- [] Follow the following style rules:
-  - [] Inputs are aligned vertically
-  - [] Inputs are stacked
-  - [] Center fields on the page
-  - [] Vertical margin between elements should be >= 8px
-  - [] Input fields corners should be rounded with >= 2px radius
+- [x] Create a user signup form with the following fields
+  - [x] Username
+    - [x] Make sure a username cannot be longer than 15 characters.
+  - [x] Email
+    - [x] Validate the email addresses to spec: https://stackoverflow.com/a/2049510.
+  - [x] Password
+  - [x] Confirm Password
+    - [x] Confirm the ‘Password’ and ‘Confirm Password’ fields match.
+  - [x] All fields are required
+- [x] Form should have validation checks
+  - [x] If input is invalid, show error on click outside of field
+  - [x] If any input is invalid, disable submit button
+- [x] Follow the following style rules:
+  - [x] Inputs are aligned vertically
+  - [x] Inputs are stacked
+  - [x] Center fields on the page
+  - [x] Vertical margin between elements should be >= 8px
+  - [x] Input fields corners should be rounded with >= 2px radius
+
+
+  -------
